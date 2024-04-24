@@ -1,7 +1,6 @@
 'use strict';
 
 const secretnumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = secretnumber;
 
 let score=20;
 document.querySelector('.score').textContent=score;
@@ -25,6 +24,7 @@ document.querySelector('.check').addEventListener(
 
         document.querySelector('body').style.backgroundColor = '#0910db';
         document.querySelector('.number').style.width='25rem';
+        document.querySelector('.number').textContent = secretnumber;
        }
        else if (guess > secretnumber)
        {
