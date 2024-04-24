@@ -73,13 +73,20 @@ h1 {
   font-size: 1.4rem;
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  left: calc((100% - 2rem) / 2);
+  transform: translateX(-50%);
 }
 
 .again {
   position: absolute;
   top: 2rem;
   left: 2rem;
+}
+
+.game {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
 }
 
 .guess {
