@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: 'Press Start 2P', sans-serif;
-  color: #eee;
-  background-color: #222;
+  color: #000;
+  background-color: #800448;
   /* background-color: #60b347; */
 }
 
@@ -58,7 +58,7 @@ h1 {
 
 .number {
   background: #eee;
-  color: #333;
+  color: #000;
   font-size: 6rem;
   width: 15rem;
   padding: 3rem 0rem;
@@ -98,7 +98,7 @@ h1 {
 .btn {
   border: none;
   background-color: #eee;
-  color: #222;
+  color: #000;
   font-size: 2rem;
   font-family: inherit;
   padding: 2rem 3rem;
