@@ -55,6 +55,11 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+a {
+  text-decoration: none;
+  color: #222;
+}
+
 .number {
   background: #eee;
   color: #000;
