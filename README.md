@@ -14,7 +14,3 @@ Welcome to the Guessing Game! This is an interactive game where players can gues
 2. **Make a Guess**: Enter your guess in the input field and click the "Check" button.
 3. **Get Feedback**: You will receive feedback on whether your guess is correct, too high, or too low.
 4. **Track Your Score**: Your score decreases with each incorrect guess. Try to keep your score high!
-
-## How to Contribute
-
-Contributions are welcome! If you find a bug or have a suggestion for improvement, please open an issue or submit a pull request.
