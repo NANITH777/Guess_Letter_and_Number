@@ -1,18 +1,11 @@
 'use strict';
 
-let secretnumber = Math.floor(Math.random() * 51);
+// generate random letter (uppercase)
+let secretletter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 
-let score=20;
+let score=10;
 let highscore = 0;
 document.querySelector('.score').textContent=score;
-
-// Retrieve the highscore from localStorage
-let savedHighscore = localStorage.getItem('highscore');
-if (savedHighscore) 
-{
-    highscore = Number(savedHighscore);
-    document.querySelector('.highscore').textContent = highscore;
-}
 
 const displayMessage = function(message)
 {
@@ -22,42 +15,48 @@ const displayMessage = function(message)
 document.querySelector('.check').addEventListener(
     'click', function()
     {
-       const guess = Number(document.querySelector('.guess').value);
+        const guess = document.querySelector('.guess').value.toLowerCase();
 
-       console.log(guess, typeof guess);
-
-       if(guess === null || guess === undefined)
+       if(guess === '')
        {
-            displayMessage('⛔ No Number!');
+            displayMessage('⛔ No Letter!');
             score--;
             document.querySelector('.score').textContent=score;
        }
 
-       else if (guess === secretnumber)
+       else if (guess === secretletter)
        {
-            displayMessage('🎉 Correct Number!');
+            displayMessage('🎉 Correct Letter!');
 
-            document.querySelector('body').style.backgroundColor = '#0910db';
-            document.querySelector('.number').style.width='25rem';
-            document.querySelector('.number').textContent = secretnumber;
+            document.querySelector('body').style.backgroundColor = '#60b347';
+            document.querySelector('.letter').style.width='25rem';
+            document.querySelector('.letter').textContent = secretletter;
 
             if (score > highscore)
             {
                 highscore=score;
                 document.querySelector('.highscore').textContent=highscore;
-
-                    // Save the highscore to localStorage
-                localStorage.setItem('highscore', highscore);
             }
        }
 
-       else if(guess !== secretnumber)
+       else if(guess !== secretletter)
        {
             if(score>1)
             {
-                displayMessage(guess > secretnumber ?'📈 Too High!' : '📉 Too Low!');
+                // Distance between letters
+                const distance = Math.abs(guess.charCodeAt(0) - secretletter.charCodeAt(0));
+    
+                if (distance > 5) 
+                { 
+                    displayMessage(guess > secretletter ? '📈 Way too high!' : '📉 Way too low!');
+                } 
+                else 
+                {
+                    displayMessage(guess > secretletter ? '📈 Too high!' : '📉 Too low!');
+                }
+
                 score--;
-                document.querySelector('.score').textContent=score;
+                document.querySelector('.score').textContent = score;
             }
 
             else
@@ -73,13 +72,13 @@ document.querySelector('.check').addEventListener(
 document.querySelector('.again').addEventListener(
     'click', function()
     {
-        secretnumber = Math.trunc(Math.random() * 20) + 1;
-        score=20;
-        document.querySelector('body').style.backgroundColor = '#75636d';
-        document.querySelector('.number').style.width='15rem';
+        secretletter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+        score=10;
+        document.querySelector('body').style.backgroundColor = '#222';
+        document.querySelector('.letter').style.width='15rem';
         document.querySelector('.score').textContent = score;
         displayMessage('Start guessing...');
-        document.querySelector('.number').textContent='?';
+        document.querySelector('.letter').textContent='?';
         document.querySelector('.guess').value='';
     }
 )

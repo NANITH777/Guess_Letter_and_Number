@@ -7,12 +7,12 @@ let highscore = 0;
 document.querySelector('.score').textContent=score;
 
 // Retrieve the highscore from localStorage
-let savedHighscore = localStorage.getItem('highscore');
+/*let savedHighscore = localStorage.getItem('highscore');
 if (savedHighscore) 
 {
     highscore = Number(savedHighscore);
     document.querySelector('.highscore').textContent = highscore;
-}
+}*/
 
 const displayMessage = function(message)
 {
@@ -23,8 +23,6 @@ document.querySelector('.check').addEventListener(
     'click', function()
     {
        const guess = Number(document.querySelector('.guess').value);
-
-       console.log(guess, typeof guess);
 
        if(guess === null || guess === undefined)
        {
@@ -46,8 +44,8 @@ document.querySelector('.check').addEventListener(
                 highscore=score;
                 document.querySelector('.highscore').textContent=highscore;
 
-                    // Save the highscore to localStorage
-                localStorage.setItem('highscore', highscore);
+                /*    // Save the highscore to localStorage
+                localStorage.setItem('highscore', highscore);*/
             }
        }
 

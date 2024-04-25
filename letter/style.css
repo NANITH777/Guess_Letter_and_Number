@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: 'Press Start 2P', sans-serif;
-  color: #000;
-  background-color: #75636d;
+  color: #eee;;
+  background-color: #222;
 }
 
 /* LAYOUT */
@@ -60,9 +60,9 @@ a {
   color: #222;
 }
 
-.number {
+.letter {
   background: #eee;
-  color: #000;
+  color: #333;
   font-size: 6rem;
   width: 15rem;
   padding: 3rem 0rem;
