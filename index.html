@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Home</title>
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacement entre les boutons */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        
+        .number-btn {
+            background-color: #48c9b0;
+            color: white;
+        }
+
+        .letter-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>GUESS</h1>
+
+    
+    <div class="button-container">
+        <button class="number-btn"><a href="/number/index.html">Number</a></button>
+        <button class="letter-btn"><a href="/letter/index.html">Letter</a></button>
+    </div>
+
+</body>
+
+</html>
