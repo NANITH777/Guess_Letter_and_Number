@@ -18,4 +18,4 @@ Welcome to the Guessing Game! This is an interactive game where players can gues
 
 ## Play the Game
 
-You can play the game directly in your browser by visiting [this link]().
+You can play the game directly in your browser by visiting [this link](https://nanith777.github.io/Guess_Letter_and_Number/).
